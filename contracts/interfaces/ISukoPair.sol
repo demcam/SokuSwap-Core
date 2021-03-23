@@ -1,16 +1,16 @@
 pragma solidity >=0.5.0;
 
 /*
- * ApeSwapFinance 
- * App:             https://apeswap.finance
- * Medium:          https://medium.com/@ape_swap    
- * Twitter:         https://twitter.com/ape_swap 
- * Telegram:        https://t.me/ape_swap
- * Announcements:   https://t.me/ape_swap_news
- * GitHub:          https://github.com/ApeSwapFinance
+ * SukoSwapFinance 
+ * App:             https://Sukoswap.finance
+ * Medium:          https://medium.com/@Suko_swap    
+ * Twitter:         https://twitter.com/Suko_swap 
+ * Telegram:        https://t.me/Suko_swap
+ * Announcements:   https://t.me/Suko_swap_news
+ * GitHub:          https://github.com/SukoSwapFinance
  */
 
-interface IApePair {
+interface ISukoPair {
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
 

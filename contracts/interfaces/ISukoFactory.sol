@@ -1,16 +1,16 @@
 pragma solidity >=0.5.0;
 
 /*
- * ApeSwapFinance 
- * App:             https://apeswap.finance
- * Medium:          https://medium.com/@ape_swap    
- * Twitter:         https://twitter.com/ape_swap 
- * Telegram:        https://t.me/ape_swap
- * Announcements:   https://t.me/ape_swap_news
- * GitHub:          https://github.com/ApeSwapFinance
+ * SukoSwapFinance 
+ * App:             https://Sukoswap.finance
+ * Medium:          https://medium.com/@Suko_swap    
+ * Twitter:         https://twitter.com/Suko_swap 
+ * Telegram:        https://t.me/Suko_swap
+ * Announcements:   https://t.me/Suko_swap_news
+ * GitHub:          https://github.com/SukoSwapFinance
  */
 
-interface IApeFactory {
+interface ISukoFactory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 
     function feeTo() external view returns (address);

@@ -1,23 +1,23 @@
 pragma solidity =0.5.16;
 
 /*
- * ApeSwapFinance 
- * App:             https://apeswap.finance
- * Medium:          https://medium.com/@ape_swap    
- * Twitter:         https://twitter.com/ape_swap 
- * Telegram:        https://t.me/ape_swap
- * Announcements:   https://t.me/ape_swap_news
- * GitHub:          https://github.com/ApeSwapFinance
+ * SukoSwapFinance 
+ * App:             https://Sukoswap.finance
+ * Medium:          https://medium.com/@Suko_swap    
+ * Twitter:         https://twitter.com/Suko_swap 
+ * Telegram:        https://t.me/Suko_swap
+ * Announcements:   https://t.me/Suko_swap_news
+ * GitHub:          https://github.com/SukoSwapFinance
  */
 
-import './interfaces/IApeERC20.sol';
+import './interfaces/ISukoERC20.sol';
 import './libraries/SafeMath.sol';
 
-contract ApeERC20 is IApeERC20 {
+contract SukoERC20 is ISukoERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'ApeSwapFinance LPs';
-    string public constant symbol = 'APE-LP';
+    string public constant name = 'SukoSwapFinance LPs';
+    string public constant symbol = 'Suko-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
@@ -89,7 +89,7 @@ contract ApeERC20 is IApeERC20 {
     }
 
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
-        require(deadline >= block.timestamp, 'ApeSwap: EXPIRED');
+        require(deadline >= block.timestamp, 'SukoSwap: EXPIRED');
         bytes32 digest = keccak256(
             abi.encodePacked(
                 '\x19\x01',
@@ -98,7 +98,7 @@ contract ApeERC20 is IApeERC20 {
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        require(recoveredAddress != address(0) && recoveredAddress == owner, 'ApeSwap: INVALID_SIGNATURE');
+        require(recoveredAddress != address(0) && recoveredAddress == owner, 'SukoSwap: INVALID_SIGNATURE');
         _approve(owner, spender, value);
     }
 }
