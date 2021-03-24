@@ -1,23 +1,23 @@
 pragma solidity =0.5.16;
 
 /*
- * SukoSwapFinance 
- * App:             https://Sukoswap.finance
- * Medium:          https://medium.com/@Suko_swap    
- * Twitter:         https://twitter.com/Suko_swap 
- * Telegram:        https://t.me/Suko_swap
- * Announcements:   https://t.me/Suko_swap_news
- * GitHub:          https://github.com/SukoSwapFinance
+ * SokuSwapFinance 
+ * App:             https://Sokuswap.finance
+ * Medium:          https://medium.com/@Soku_swap    
+ * Twitter:         https://twitter.com/Soku_swap 
+ * Telegram:        https://t.me/Soku_swap
+ * Announcements:   https://t.me/Soku_swap_news
+ * GitHub:          https://github.com/SokuSwapFinance
  */
 
-import './interfaces/ISukoERC20.sol';
+import './interfaces/ISokuERC20.sol';
 import './libraries/SafeMath.sol';
 
-contract SukoERC20 is ISukoERC20 {
+contract SokuERC20 is ISokuERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'SukoSwapFinance LPs';
-    string public constant symbol = 'Suko-LP';
+    string public constant name = 'SokuSwapFinance LPs';
+    string public constant symbol = 'Soku-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
@@ -89,7 +89,7 @@ contract SukoERC20 is ISukoERC20 {
     }
 
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
-        require(deadline >= block.timestamp, 'SukoSwap: EXPIRED');
+        require(deadline >= block.timestamp, 'SokuSwap: EXPIRED');
         bytes32 digest = keccak256(
             abi.encodePacked(
                 '\x19\x01',
@@ -98,7 +98,7 @@ contract SukoERC20 is ISukoERC20 {
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        require(recoveredAddress != address(0) && recoveredAddress == owner, 'SukoSwap: INVALID_SIGNATURE');
+        require(recoveredAddress != address(0) && recoveredAddress == owner, 'SokuSwap: INVALID_SIGNATURE');
         _approve(owner, spender, value);
     }
 }

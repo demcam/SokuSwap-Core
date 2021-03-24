@@ -34,13 +34,13 @@ module.exports = {
             confirmations: 10,
             timeoutBlocks: 200,
             networkCheckTimeout: 1000000,
-            skipDryRun: true
+            skipDryRun: false
         }
     },
 
     compilers: {
         solc: {
-            version: "0.6.12",
+            version: "0.5.16",
             optimizer: {
                 enabled: true,
                 runs: 200

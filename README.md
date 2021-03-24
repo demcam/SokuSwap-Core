@@ -1,6 +1,6 @@
-# Ape Factory
+# Soku Factory
 
-In-depth documentation on PancakeSwap is available at [docs.pancakeswap.finance](https://docs.pancakeswap.finance/).
+
 
 # Local Development
 

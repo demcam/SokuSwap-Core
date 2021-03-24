@@ -1,16 +1,16 @@
 pragma solidity >=0.5.0;
 
 /*
- * SukoSwapFinance 
- * App:             https://Sukoswap.finance
- * Medium:          https://medium.com/@Suko_swap    
- * Twitter:         https://twitter.com/Suko_swap 
- * Telegram:        https://t.me/Suko_swap
- * Announcements:   https://t.me/Suko_swap_news
- * GitHub:          https://github.com/SukoSwapFinance
+ * SokuSwapFinance 
+ * App:             https://Sokuswap.finance
+ * Medium:          https://medium.com/@Soku_swap    
+ * Twitter:         https://twitter.com/Soku_swap 
+ * Telegram:        https://t.me/Soku_swap
+ * Announcements:   https://t.me/Soku_swap_news
+ * GitHub:          https://github.com/SokuSwapFinance
  */
 
-interface ISukoPair {
+interface ISokuPair {
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
 
